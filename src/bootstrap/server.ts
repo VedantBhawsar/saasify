@@ -1,5 +1,5 @@
 import Fastify from "fastify";
-import config from "./config";
+import config from "../config";
 
 const fastify = Fastify({
   logger: true,
@@ -14,6 +14,11 @@ fastify.get("/health", async (request, reply) => {
 fastify.get("/ping", async (request, reply) => {
   return { message: "pong" };
 });
+
+
+fastify.get("/", async (request, response)=> {
+  return {message: "server is running fine" + new Date().toISOString()}
+})
 
 // Start server
 const start = async () => {

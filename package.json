@@ -4,7 +4,7 @@
   "description": "SaaS backend with multi-tenancy, billing, and notifications",
   "main": "dist/bootstrap/server.js",
   "scripts": {
-    "dev": "tsx watch ./src/server.ts",
+    "dev": "tsx watch ./src/bootstrap/server.ts",
     "build": "tsc",
     "start": "node dist/bootstrap/server.js",
     "worker": "tsx src/bootstrap/worker.ts",
